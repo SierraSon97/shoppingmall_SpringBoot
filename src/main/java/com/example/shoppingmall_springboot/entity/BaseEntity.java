@@ -1,6 +1,8 @@
 package com.example.shoppingmall_springboot.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -11,7 +13,8 @@ import javax.persistence.MappedSuperclass;
 
 @EntityListeners(value = {AuditingEntityListener.class})
 @MappedSuperclass
-@Data
+@Getter
+@Setter
 public abstract class BaseEntity extends BaseTimeEntity {
     @CreatedBy
     @Column(updatable = false)

@@ -2,6 +2,8 @@ package com.example.shoppingmall_springboot.entity;
 
 import com.example.shoppingmall_springboot.constant.OrderStatus;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -10,7 +12,8 @@ import java.util.List;
 
 @Entity
 @Table(name="orders")
-@Data
+@Getter
+@Setter
 public class Order extends BaseEntity {
     @Id @GeneratedValue
     @Column(name = "order_id")

@@ -2,11 +2,14 @@ package com.example.shoppingmall_springboot.entity;
 
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class OrderItem extends BaseEntity {
     @Id @GeneratedValue
     @Column(name = "order_item_id")
